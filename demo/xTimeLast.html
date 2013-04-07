@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>xTimeLast 剩余时间插件， 倒计时插件</title>
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+<header>
+    <div class="w960 mga"><h1>xTimeLast 剩余时间插件， 倒计时插件</h1></div>
+</header>
+<div class="w960 mga">
+    <div class="intro">
+        <h2>基本用法</h2>
+
+    </div>
+    <div class="showbox">
+        <p><span class="mBLock tar" data-endTime="2018/08/8 18:12:14"><span class="J_days"></span>:<span class="J_hour"></span>:<span class="J_min"></span>:<span class="J_sec"></span></span></p>
+        <p><span class="mBLock tar" data-endTime="2016/08/8 08:08:00"><span class="J_days"></span>:<span class="J_hour"></span>:<span class="J_min"></span>:<span class="J_sec"></span>:<span class="J_msec"></span></span></p>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../js/mTimeLast.js"></script>
+<script type="text/javascript">
+    $('.mBLock').mTimeLast({
+        getTimeUrl: null,   // 用于ajax方式从服务器段获取时间，默认用客户端时间
+        dayEle: '.J_days',
+        hourEle: '.J_hour',
+        minEle: '.J_min',
+        secEle: '.J_sec',
+        msEle: '.J_msec',
+        callback: function(){}
+     });
+</script>
+</body>
+</html>
